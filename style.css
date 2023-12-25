@@ -68,11 +68,20 @@
 .card-title {
     text-align: center;
 }
-.card:hover .servicesIcon {
-    color: #008000;
+
+.card.servicesText, .card:hover .servicesIcon .btn.btn-success:hover{
+    transition: background-color 0.6s ease, color 0.6s ease; /* Плавный переход цвета в течение 0.3 секунды */
 }
-.servicesText:hover {
-    border: 1px solid #008000;
+
+.card.servicesText:hover {
+    background-color: blue; /* Измени цвет на тот, который тебе нужен */
+    color: white; /* Цвет текста при наведении */
+}
+
+
+
+.text-center {
+    color: hsl(224, 80%, 48%);
 }
 
 .social-icons {
@@ -80,14 +89,15 @@
     cursor: pointer;
 }
 .fa-facebook:hover,.fa-instagram:hover,.fa-twitter:hover,.fa-linkedin:hover, .fa-twitch:hover {
-    color: #008000;
+    color: hsl(0, 0%, 100%);
+    transition: background-color 0.6s ease, color 0.6s ease;
 }
 .fab {
     color: #000000;
 }
 
 #footer {
-    background-color: #808080;
+    background-color: hsl(224, 80%, 48%);
     text-align: center;
 }
 
@@ -97,4 +107,17 @@
 
 #about {
     min-height: 30vh;
+}
+
+.btn.btn-success,
+.btn.btn-success:hover {
+    background-color: hsl(224, 80%, 48%); /* Используй !important, чтобы переопределить стили Bootstrap */
+    border-color: hsl(224, 80%, 48%); /* Используй !important, если нужно переопределить цвет рамки кнопки */
+    color: white; /* Цвет текста при наведении */
+}
+
+/* Изменение цвета кнопки btn-success при наведении */
+.btn.btn-success:hover {
+    background-color: darkblue ; /* Используй !important, чтобы переопределить стили Bootstrap при наведении */
+    border-color: darkblue ; /* Используй !important, если нужно переопределить цвет рамки кнопки при наведении */
 }
